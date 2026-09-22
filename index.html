@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#070b10">
-  <meta name="description" content="Nova Group is an advanced technology industrialization platform in formation in Raleigh, North Carolina, focused on evaluation, development, manufacturing readiness, and commercialization.">
+  <meta name="description" content="Nova Group is a multi-project venture development and execution platform in formation in Raleigh, North Carolina, evaluating and advancing selected opportunities across technology, industry, energy, and medical innovation.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Nova Group | Advanced Technology Industrialization">
-  <meta property="og:description" content="An advanced technology platform in formation, connecting technical promise with disciplined industrial execution.">
+  <meta property="og:title" content="Nova Group | Multi-Project Venture Platform">
+  <meta property="og:description" content="One platform for evaluating, structuring, building, and scaling a diversified portfolio of selected projects.">
   <meta property="og:url" content="https://novagroupnc.github.io/">
   <link rel="canonical" href="https://novagroupnc.github.io/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b10'/%3E%3Cpath d='M17 45V19l30 26V19' fill='none' stroke='%23d39b61' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <title>Nova Group | Advanced Technology Industrialization</title>
+  <title>Nova Group | Multi-Project Venture Platform</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Nova Group (Working Name)",
     "url": "https://novagroupnc.github.io/",
-    "description": "Advanced technology industrialization platform in formation in Raleigh, North Carolina."
+    "description": "Multi-project venture development and execution platform in formation in Raleigh, North Carolina."
   }
   </script>
   <style>
@@ -267,6 +267,8 @@
 
     .focus-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
     .focus-card {
+      position: relative;
+      overflow: hidden;
       min-height: 20rem;
       display: flex;
       flex-direction: column;
@@ -277,9 +279,24 @@
       background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
       transition: transform .35s ease, border-color .35s ease, background .35s ease;
     }
+    .focus-card::before {
+      content: "";
+      position: absolute;
+      width: 11rem;
+      height: 11rem;
+      right: -5rem;
+      top: -5rem;
+      border: 1px solid rgba(211,155,97,.16);
+      border-radius: 50%;
+      transition: transform .5s ease, border-color .5s ease;
+    }
     .focus-card:hover { transform: translateY(-6px); border-color: rgba(211,155,97,.34); background: linear-gradient(145deg, rgba(211,155,97,.075), rgba(255,255,255,.016)); }
-    .focus-card:nth-child(1), .focus-card:nth-child(4) { grid-column: span 7; }
-    .focus-card:nth-child(2), .focus-card:nth-child(3) { grid-column: span 5; }
+    .focus-card:hover::before { transform: scale(1.16); border-color: rgba(211,155,97,.34); }
+    .focus-card:nth-child(1), .focus-card:nth-child(4) { grid-column: span 8; }
+    .focus-card:nth-child(2), .focus-card:nth-child(3) { grid-column: span 4; }
+    .focus-card:nth-child(5) { grid-column: span 7; }
+    .focus-card:nth-child(6) { grid-column: span 5; }
+    .focus-card:nth-child(2), .focus-card:nth-child(5) { background: linear-gradient(145deg, rgba(134,173,186,.075), rgba(255,255,255,.012)); }
     .card-index { color: var(--quiet); font-size: .76rem; font-weight: 740; letter-spacing: .14em; }
     .focus-card h3 { margin: 0 0 .8rem; font-family: Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.45rem); font-weight: 400; }
     .focus-card p { max-width: 520px; margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.72; }
@@ -322,22 +339,34 @@
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 1fr .8fr;
+      grid-template-columns: 1.08fr .92fr;
       gap: clamp(2rem, 7vw, 7rem);
-      padding: clamp(2rem, 6vw, 5rem);
+      padding: clamp(2rem, 6vw, 5.5rem);
       border: 1px solid var(--line);
       border-radius: 2rem;
-      background: linear-gradient(135deg, rgba(134,173,186,.12), rgba(211,155,97,.08) 68%, rgba(255,255,255,.025));
+      background:
+        radial-gradient(circle at 100% 0%, rgba(211,155,97,.16), transparent 30rem),
+        linear-gradient(135deg, rgba(134,173,186,.1), rgba(211,155,97,.06) 68%, rgba(255,255,255,.025));
     }
     .contact-card::after { content: "N"; position: absolute; right: -1.5rem; bottom: -7rem; color: rgba(255,255,255,.025); font-family: Georgia, serif; font-size: 26rem; line-height: 1; pointer-events: none; }
     .contact-copy, .contact-details { position: relative; z-index: 2; }
     .contact-copy h2 { margin: .8rem 0 1.1rem; font-size: clamp(2.55rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.05em; }
     .contact-copy p:last-child { max-width: 610px; color: var(--muted); font-size: 1.03rem; }
-    .contact-details { display: grid; align-content: end; gap: .75rem; }
-    .contact-link { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
-    .contact-link small { display: block; margin-bottom: .15rem; color: var(--quiet); font-size: .7rem; font-weight: 740; letter-spacing: .13em; text-transform: uppercase; }
-    .contact-link strong { overflow-wrap: anywhere; font-size: .96rem; }
-    .contact-link span:last-child { color: var(--copper); }
+    .contact-details { display: grid; align-content: center; }
+    .contact-channel {
+      display: block;
+      padding: 1.55rem;
+      border: 1px solid rgba(226,234,239,.19);
+      border-radius: 1.25rem;
+      background: rgba(7,11,16,.58);
+      box-shadow: 0 28px 70px rgba(0,0,0,.2);
+      transition: transform .3s ease, border-color .3s ease, background .3s ease;
+    }
+    .contact-channel:hover { transform: translateY(-4px); border-color: rgba(211,155,97,.5); background: rgba(7,11,16,.76); }
+    .contact-channel small { display: block; margin-bottom: .75rem; color: var(--copper); font-size: .7rem; font-weight: 760; letter-spacing: .16em; text-transform: uppercase; }
+    .contact-channel strong { display: flex; justify-content: space-between; align-items: center; gap: 1rem; overflow-wrap: anywhere; font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 620; }
+    .contact-channel i { color: var(--copper); font-family: Georgia, serif; font-size: 1.45rem; font-style: normal; }
+    .contact-context { margin: 1rem 0 0; color: var(--quiet); font-size: .78rem; line-height: 1.7; letter-spacing: .04em; }
 
     footer { padding: 2.2rem 0 2.6rem; border-top: 1px solid var(--line); }
     .footer-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2rem; align-items: start; }
@@ -414,45 +443,47 @@
       <div class="hero-grid shell">
         <div class="reveal">
           <div class="status-line">Company in formation · Raleigh, North Carolina</div>
-          <h1>From technical promise to <span class="serif">industrial scale.</span></h1>
-          <p class="hero-copy">Nova Group is being formed as an advanced technology industrialization platform—bringing technical evaluation, development planning, manufacturing readiness, and commercialization into one disciplined pathway.</p>
+          <h1>One platform. <span class="serif">Multiple ventures.</span> Built to move.</h1>
+          <p class="hero-copy">Nova Group is being formed as a multi-project venture development and execution platform—built to evaluate opportunities, shape operating pathways, assemble the right capabilities, and advance selected projects with discipline.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#platform">Explore the platform <span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="mailto:oliviawhitmore2026@outlook.com">Contact Nova Group <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#platform">Explore the portfolio model <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="mailto:emineasan545@outlook.com">Contact Nova Group <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
         <div class="system-card reveal" aria-label="Nova Group operating pathway illustration">
-          <span class="system-label">Integrated pathway / 01</span>
+          <span class="system-label">Portfolio operating system / 01</span>
           <div class="system-center"><strong>NOVA</strong></div>
-          <span class="node node-1">Evaluate</span>
-          <span class="node node-2">Develop</span>
-          <span class="node node-3">Industrialize</span>
-          <span class="node node-4">Commercialize</span>
-          <span class="system-note">Built around disciplined execution</span>
+          <span class="node node-1">Discover</span>
+          <span class="node node-2">Structure</span>
+          <span class="node node-3">Build</span>
+          <span class="node node-4">Scale</span>
+          <span class="system-note">A common discipline across every project</span>
         </div>
       </div>
     </section>
 
     <div class="fact-strip" id="platform">
       <dl class="facts shell">
-        <div class="fact"><dt>Status</dt><dd>Organizational formation and platform development</dd></div>
+        <div class="fact"><dt>Mandate</dt><dd>Multi-project venture development and execution</dd></div>
         <div class="fact"><dt>Base</dt><dd>Raleigh, North Carolina · United States</dd></div>
-        <div class="fact"><dt>Orientation</dt><dd>Long-term value through industrial execution</dd></div>
+        <div class="fact"><dt>Model</dt><dd>Evaluate · Structure · Build · Scale</dd></div>
       </dl>
     </div>
 
     <section id="focus">
       <div class="shell">
         <div class="section-head reveal">
-          <div><p class="eyebrow">Platform focus</p><h2>Where capability meets consequence.</h2></div>
-          <p>We are shaping a platform for technologies that require more than invention. The work begins with clear evaluation and continues through the operating decisions needed to reach real markets.</p>
+          <div><p class="eyebrow">Portfolio architecture</p><h2>Built for a portfolio, not a single category.</h2></div>
+          <p>Nova Group is designed to evaluate and advance multiple projects through one operating framework. Current areas of interest reflect confirmed work in technology, industry, energy, and selected medical innovation—without limiting the platform to any single sector.</p>
         </div>
         <div class="focus-grid">
-          <article class="focus-card reveal"><span class="card-index">01 / Advanced manufacturing</span><div><h3>Manufacturing systems</h3><p>Translating technical requirements into practical production pathways, operating models, and scalable manufacturing readiness.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">02 / AI</span><div><h3>Applied intelligence</h3><p>Evaluating AI where it can improve industrial decisions, operating visibility, and the quality of execution.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">03 / Automation</span><div><h3>Industrial automation</h3><p>Connecting controls, robotics, process design, and workforce realities to build resilient operating systems.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">04 / Technology domains</span><div><h3>Energy and selected medical technologies</h3><p>Assessing opportunities where technical depth, regulatory awareness, manufacturing discipline, and responsible commercialization must move together.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">01 / Portfolio platform</span><div><h3>One operating system for multiple ventures</h3><p>Creating a shared framework for opportunity assessment, project design, leadership alignment, execution planning, and responsible scale.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">02 / AI</span><div><h3>Applied intelligence</h3><p>Evaluating AI where it can strengthen decisions, operating visibility, and execution quality across the portfolio.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">03 / Industry</span><div><h3>Advanced manufacturing and automation</h3><p>Connecting technical requirements, manufacturing systems, robotics, controls, and scalable operating readiness.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">04 / Energy</span><div><h3>Energy technologies and infrastructure pathways</h3><p>Assessing technically credible opportunities that require disciplined development, operating coordination, and long-term execution.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">05 / Health</span><div><h3>Selected medical technologies</h3><p>Advancing carefully selected opportunities where technical depth, regulatory awareness, responsible commercialization, and operating discipline must move together.</p></div></article>
+          <article class="focus-card reveal"><span class="card-index">06 / Opportunity</span><div><h3>Selected new ventures</h3><p>Considering additional projects only when evidence, leadership, timing, and the pathway to execution are sufficiently clear.</p></div></article>
         </div>
       </div>
     </section>
@@ -460,20 +491,20 @@
     <section class="pathway" id="approach">
       <div class="path-grid shell">
         <div class="path-intro reveal">
-          <p class="eyebrow">Operating approach</p>
-          <h2>A clearer path from decision to delivery.</h2>
-          <p>The platform is designed around a simple principle: important technologies need the right sequence of decisions, people, and operating discipline—not more noise.</p>
+          <p class="eyebrow">Portfolio operating model</p>
+          <h2>Different projects. One standard of execution.</h2>
+          <p>Each opportunity may begin in a different sector, but the questions remain consistent: Is it credible? Who owns the work? What must align? And what is required to build responsibly?</p>
         </div>
         <div class="reveal">
           <div class="path-tabs" role="tablist" aria-label="Nova Group operating stages">
-            <button class="path-tab" id="tab-assess" role="tab" aria-selected="true" aria-controls="path-panel" data-title="Assess the opportunity" data-copy="Examine technical credibility, market relevance, execution risk, and the conditions required for a responsible next step."><span class="tab-num">01</span><span class="tab-title">Assess the opportunity</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-design" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Design the pathway" data-copy="Define the development, regulatory, operating, talent, and commercial decisions that must align before capital and teams are committed."><span class="tab-num">02</span><span class="tab-title">Design the pathway</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-build" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Prepare to industrialize" data-copy="Bring technical and operating leaders together around manufacturing readiness, partner selection, quality systems, and measurable milestones."><span class="tab-num">03</span><span class="tab-title">Prepare to industrialize</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-scale" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Build for durable scale" data-copy="Create the structures, leadership depth, and commercial discipline needed to grow without losing the integrity of the original technology."><span class="tab-num">04</span><span class="tab-title">Build for durable scale</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-assess" role="tab" aria-selected="true" aria-controls="path-panel" data-title="Qualify the opportunity" data-copy="Examine credibility, strategic relevance, execution risk, and the conditions required for a responsible next decision."><span class="tab-num">01</span><span class="tab-title">Qualify the opportunity</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-design" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Structure the venture" data-copy="Define ownership, milestones, operating requirements, leadership needs, and the pathway from concept to execution."><span class="tab-num">02</span><span class="tab-title">Structure the venture</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-build" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Align people and capabilities" data-copy="Bring the right technical, operating, commercial, and leadership capabilities together around clear responsibilities and measurable outcomes."><span class="tab-num">03</span><span class="tab-title">Align people and capabilities</span><span class="tab-arrow">↘</span></button>
+            <button class="path-tab" id="tab-scale" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Build with governance" data-copy="Advance selected projects with visible ownership, disciplined decisions, and structures designed for durable growth."><span class="tab-num">04</span><span class="tab-title">Build with governance</span><span class="tab-arrow">↘</span></button>
           </div>
           <div class="path-panel" id="path-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-assess">
-            <h3>Assess the opportunity</h3>
-            <p>Examine technical credibility, market relevance, execution risk, and the conditions required for a responsible next step.</p>
+            <h3>Qualify the opportunity</h3>
+            <p>Examine credibility, strategic relevance, execution risk, and the conditions required for a responsible next decision.</p>
           </div>
         </div>
       </div>
@@ -482,13 +513,13 @@
     <section>
       <div class="shell">
         <div class="section-head reveal">
-          <div><p class="eyebrow">How we are building</p><h2>Principles before scale.</h2></div>
-          <p>Nova Group is still in formation. That makes clarity especially important: what is known, what is being developed, and what must wait until it can be verified.</p>
+          <div><p class="eyebrow">Institutional discipline</p><h2>Clarity before commitment.</h2></div>
+          <p>Nova Group is still in formation. Across a multi-project platform, credibility depends on distinguishing what is confirmed, what is under evaluation, and what must wait until it can be verified.</p>
         </div>
         <div class="principles">
-          <article class="principle reveal"><span>01 / Evidence</span><h3>Substance over presentation</h3><p>Technical and commercial claims should be tested before they become public commitments.</p></article>
-          <article class="principle reveal"><span>02 / People</span><h3>Capability before title</h3><p>We are beginning conversations with experienced leaders who can support long-term organizational growth.</p></article>
-          <article class="principle reveal"><span>03 / Execution</span><h3>Sequence before speed</h3><p>Good industrial decisions are made in the right order, with ownership and risk visible from the start.</p></article>
+          <article class="principle reveal"><span>01 / Portfolio</span><h3>Selection before expansion</h3><p>New projects enter the portfolio only when their relevance, risks, and execution requirements can be understood clearly.</p></article>
+          <article class="principle reveal"><span>02 / People</span><h3>Capability before title</h3><p>We are beginning conversations with experienced leaders who can support long-term organizational and project growth.</p></article>
+          <article class="principle reveal"><span>03 / Execution</span><h3>Ownership before speed</h3><p>Good decisions are made in the right order, with responsibilities, dependencies, and risk visible from the start.</p></article>
         </div>
       </div>
     </section>
@@ -496,14 +527,13 @@
     <section id="contact">
       <div class="contact-card shell reveal">
         <div class="contact-copy">
-          <p class="eyebrow">Connect</p>
-          <h2>Start with a serious conversation.</h2>
-          <p>We welcome thoughtful introductions from technical operators, industrial leaders, and partners whose experience can help shape responsible pathways to scale.</p>
+          <p class="eyebrow">Private point of entry</p>
+          <h2>One address. The right conversation.</h2>
+          <p>For project opportunities, strategic relationships, and senior leadership conversations, contact Nova Group through a single confidential channel.</p>
         </div>
         <div class="contact-details">
-          <a class="contact-link" href="mailto:oliviawhitmore2026@outlook.com"><span><small>Email</small><strong>oliviawhitmore2026@outlook.com</strong></span><span aria-hidden="true">↗</span></a>
-          <a class="contact-link" href="tel:+13606468458"><span><small>Mobile</small><strong>+1 (360) 646-8458</strong></span><span aria-hidden="true">↗</span></a>
-          <div class="contact-link"><span><small>Location</small><strong>Raleigh, North Carolina</strong></span><span aria-hidden="true">•</span></div>
+          <a class="contact-channel" href="mailto:emineasan545@outlook.com"><small>Direct correspondence</small><strong><span>emineasan545@outlook.com</span><i aria-hidden="true">↗</i></strong></a>
+          <p class="contact-context">Project introductions · Strategic relationships · Leadership conversations</p>
         </div>
       </div>
     </section>
