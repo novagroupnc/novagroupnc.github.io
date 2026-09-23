@@ -1,590 +1,327 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#070b10">
-  <meta name="description" content="Nova Group is a multi-project venture development and execution platform in formation in Raleigh, North Carolina, evaluating and advancing selected opportunities across technology, industry, energy, and medical innovation.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5faff">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="description" content="Nova Group is a Raleigh-based multi-project venture platform evaluating and developing opportunities across applied intelligence, advanced manufacturing, energy and selected medical technologies.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nova Group | Multi-Project Venture Platform">
-  <meta property="og:description" content="One platform for evaluating, structuring, building, and scaling a diversified portfolio of selected projects.">
+  <meta property="og:description" content="A disciplined platform for evaluating opportunities, structuring ventures and building the capabilities required to move selected projects forward.">
   <meta property="og:url" content="https://novagroupnc.github.io/">
   <link rel="canonical" href="https://novagroupnc.github.io/">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b10'/%3E%3Cpath d='M17 45V19l30 26V19' fill='none' stroke='%23d39b61' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <title>Nova Group | Multi-Project Venture Platform</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Nova Group (Working Name)",
-    "url": "https://novagroupnc.github.io/",
-    "description": "Multi-project venture development and execution platform in formation in Raleigh, North Carolina."
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231b66e5'/%3E%3Cpath d='M17 45V19l15 18 15-18v26' fill='none' stroke='white' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <style>
-    :root {
-      color-scheme: dark;
-      --bg: #070b10;
-      --bg-2: #0a1017;
-      --panel: rgba(15, 23, 31, .82);
-      --panel-solid: #0e161e;
-      --line: rgba(226, 234, 239, .13);
-      --line-strong: rgba(226, 234, 239, .25);
-      --text: #f2f4f5;
-      --muted: #9aa7b0;
-      --quiet: #6c7a84;
-      --copper: #d39b61;
-      --copper-soft: rgba(211, 155, 97, .14);
-      --steel: #86adba;
-      --steel-soft: rgba(134, 173, 186, .12);
-      --radius: 1.4rem;
-      --max: 1240px;
+    :root{
+      --ink:#102b4e;
+      --blue:#1b66e5;
+      --blue-2:#5ca9ff;
+      --sky:#dff1ff;
+      --teal:#129a95;
+      --mint:#dff7f1;
+      --coral:#ef816f;
+      --peach:#fff0e9;
+      --yellow:#f3c85e;
+      --paper:#ffffff;
+      --canvas:#f5faff;
+      --muted:#5c708c;
+      --line:rgba(22,70,125,.14);
+      --shadow:0 30px 80px rgba(31,84,145,.14);
+      --radius:28px;
     }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--canvas);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body.menu-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    ::selection{color:white;background:var(--blue)}
+    .scroll-line{position:fixed;inset:0 auto auto 0;width:0;height:3px;z-index:60;background:linear-gradient(90deg,var(--blue),var(--teal),var(--coral));box-shadow:0 0 16px rgba(27,102,229,.4);pointer-events:none}
+    .cursor-glow{position:fixed;left:0;top:0;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;z-index:18;pointer-events:none;opacity:0;background:radial-gradient(circle,rgba(92,169,255,.16),rgba(18,154,149,.07) 38%,transparent 70%);mix-blend-mode:multiply;transition:opacity .25s}
+    .tech-ripple{position:fixed;width:18px;height:18px;margin:-9px;border:1px solid rgba(27,102,229,.55);border-radius:50%;z-index:70;pointer-events:none;animation:signal-ripple .72s ease-out forwards}
+    @keyframes signal-ripple{0%{opacity:.85;transform:scale(.25);box-shadow:0 0 0 0 rgba(18,154,149,.22)}100%{opacity:0;transform:scale(6);box-shadow:0 0 0 18px rgba(18,154,149,0)}}
+    .fx-card{--fx-x:50%;--fx-y:50%;transform-style:preserve-3d;will-change:transform}
+    .fx-card:before{content:"";position:absolute;inset:0;z-index:6;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--fx-x) var(--fx-y),rgba(255,255,255,.42),transparent 38%);transition:opacity .25s}
+    .fx-card:hover:before{opacity:1}
+    .wrap{width:min(1240px,calc(100% - 48px));margin-inline:auto}
+    .section{padding:118px 0;position:relative}
+    .kicker{display:flex;align-items:center;gap:12px;margin:0 0 20px;color:var(--blue);font:700 .75rem Manrope,sans-serif;letter-spacing:.15em;text-transform:uppercase}
+    .kicker:before{content:"";width:30px;height:2px;background:currentColor}
+    h1,h2,h3{margin:0;font-family:Manrope,sans-serif;letter-spacing:-.045em}
+    h1{font-size:clamp(4rem,8vw,7.4rem);font-weight:500;line-height:.92}
+    h2{font-size:clamp(2.6rem,5vw,4.9rem);font-weight:500;line-height:1.02}
+    h3{font-size:1.3rem;line-height:1.18}
+    p{line-height:1.68}
+    .lead{font-size:clamp(1.05rem,1.35vw,1.24rem);color:var(--muted)}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.25,1)}
+    .reveal.in-view{opacity:1;transform:none}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; background: var(--bg); }
-    body {
-      margin: 0;
-      min-width: 320px;
-      overflow-x: hidden;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 16% -8%, rgba(89, 127, 142, .19), transparent 32rem),
-        radial-gradient(circle at 96% 18%, rgba(167, 105, 50, .12), transparent 30rem),
-        linear-gradient(180deg, #070b10 0%, #091018 52%, #070b10 100%);
-      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: .025;
-      z-index: 9;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
-    }
-    a { color: inherit; text-decoration: none; }
-    button, input, textarea { font: inherit; }
-    button { color: inherit; }
-    ::selection { background: var(--copper); color: var(--bg); }
-    :focus-visible { outline: 2px solid var(--copper); outline-offset: 4px; }
+    .site-header{position:fixed;inset:0 0 auto;z-index:30;height:82px;border-bottom:1px solid transparent;transition:.3s}
+    .site-header.scrolled{background:rgba(250,253,255,.86);border-color:var(--line);backdrop-filter:blur(18px)}
+    .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .brand{display:flex;align-items:center;gap:13px;font:700 1rem Manrope,sans-serif}
+    .brand-mark{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;color:white;background:linear-gradient(135deg,var(--blue),var(--teal));box-shadow:0 12px 28px rgba(27,102,229,.22)}
+    .brand-mark svg{width:23px}
+    .brand-copy{display:flex;flex-direction:column;line-height:1}
+    .brand-copy small{margin-top:6px;color:var(--muted);font-size:.58rem;letter-spacing:.11em;text-transform:uppercase}
+    .nav-links{display:flex;align-items:center;gap:32px;font-size:.88rem;font-weight:600}
+    .nav-links>a:not(.nav-cta){position:relative}
+    .nav-links>a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--blue);transition:right .25s}
+    .nav-links>a:hover:after{right:0}
+    .nav-cta{padding:12px 20px;border-radius:999px;color:white;background:var(--blue);box-shadow:0 10px 28px rgba(27,102,229,.2);transition:.25s}
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(27,102,229,.26)}
+    .menu-toggle{display:none;width:46px;height:46px;border:0;border-radius:50%;background:white;color:var(--ink);box-shadow:0 8px 24px rgba(31,84,145,.12)}
 
-    .skip-link {
-      position: fixed;
-      top: .75rem;
-      left: .75rem;
-      z-index: 100;
-      transform: translateY(-180%);
-      padding: .75rem 1rem;
-      border-radius: .6rem;
-      color: var(--bg);
-      background: var(--text);
-      transition: transform .2s ease;
-    }
-    .skip-link:focus { transform: translateY(0); }
-    .shell { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
-    .eyebrow {
-      margin: 0;
-      color: var(--copper);
-      font-size: .76rem;
-      font-weight: 750;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-    .serif { font-family: Georgia, "Times New Roman", serif; }
-    .muted { color: var(--muted); }
+    .hero{--hero-x:72%;--hero-y:24%;min-height:100svh;padding:138px 0 74px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at var(--hero-x) var(--hero-y),rgba(255,255,255,.92),transparent 24%),linear-gradient(135deg,#f8fcff 0%,#e8f5ff 55%,#eefcf8 100%)}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:-260px;top:120px;background:radial-gradient(circle,rgba(92,169,255,.23),rgba(92,169,255,0) 70%)}
+    .hero:after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;right:-230px;bottom:-220px;background:radial-gradient(circle,rgba(18,154,149,.16),rgba(18,154,149,0) 70%)}
+    .hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center;position:relative;z-index:2}
+    .hero-copy .status{display:inline-flex;align-items:center;gap:9px;padding:9px 13px;margin-bottom:28px;border:1px solid rgba(27,102,229,.15);border-radius:999px;color:var(--blue);background:rgba(255,255,255,.68);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .hero-copy .status i{width:7px;height:7px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 5px rgba(239,129,111,.12)}
+    .hero h1 span{display:block;color:var(--blue)}
+    .hero-copy .lead{max-width:600px;margin:30px 0 36px}
+    .hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .button{min-height:54px;padding:0 24px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font:700 .9rem Manrope,sans-serif;transition:transform .16s ease,background .25s,box-shadow .25s;will-change:transform}
+    .button svg{width:18px;transition:transform .25s}
+    .button:hover svg{transform:translateX(4px)}
+    .button-primary{color:white;background:var(--blue);box-shadow:0 14px 34px rgba(27,102,229,.22)}
+    .button-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(27,102,229,.28)}
+    .button-secondary{border:1px solid var(--line);background:rgba(255,255,255,.7)}
+    .button-secondary:hover{background:white;transform:translateY(-2px)}
+    .hero-visual{position:relative;min-height:650px}
+    .photo-card{position:absolute;overflow:hidden;background:white;box-shadow:var(--shadow)}
+    .photo-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.75,.25,1)}
+    .photo-card:hover img{transform:scale(1.04)}
+    .photo-main{inset:0 8% 68px 14%;border-radius:190px 190px 34px 34px}
+    .photo-main img{object-position:center}
+    .photo-manufacturing{width:245px;height:190px;left:0;bottom:0;border:8px solid white;border-radius:26px}
+    .photo-chip{width:220px;height:220px;right:0;top:34px;border:8px solid white;border-radius:50%}
+    .image-label{position:absolute;left:26px;bottom:24px;z-index:2;padding:10px 13px;border-radius:12px;color:var(--ink);background:rgba(255,255,255,.86);backdrop-filter:blur(10px);font-size:.74rem;font-weight:700}
+    .photo-main:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(15,47,86,.32))}
+    .hero-fact{position:absolute;right:6%;bottom:6px;z-index:4;width:245px;padding:20px;border:1px solid rgba(255,255,255,.74);border-radius:20px;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);box-shadow:0 18px 45px rgba(31,84,145,.13)}
+    .hero-fact small{display:block;color:var(--teal);font:700 .67rem Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+    .hero-fact strong{display:block;margin-top:10px;font:600 1rem Manrope,sans-serif;line-height:1.35}
 
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 20;
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      background: rgba(7, 11, 16, .76);
-      -webkit-backdrop-filter: blur(18px);
-      backdrop-filter: blur(18px);
-    }
-    .nav {
-      min-height: 4.7rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    .brand { display: inline-flex; align-items: center; gap: .8rem; min-width: max-content; }
-    .brand-mark {
-      width: 2.2rem;
-      height: 2.2rem;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line-strong);
-      border-radius: .65rem;
-      color: var(--copper);
-      background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.015));
-      font-family: Georgia, serif;
-      font-size: 1.1rem;
-    }
-    .brand-name { font-weight: 730; letter-spacing: -.01em; }
-    .working-name { margin-left: .35rem; color: var(--quiet); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 1.65rem; }
-    .nav-links a { color: var(--muted); font-size: .88rem; font-weight: 650; transition: color .2s ease; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      padding: .72rem 1rem;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      color: var(--text) !important;
-      background: rgba(255,255,255,.04);
-    }
+    .factbar{background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .fact-grid{display:grid;grid-template-columns:1.4fr .8fr 1fr}
+    .fact{padding:28px 30px;border-right:1px solid var(--line)}
+    .fact:first-child{padding-left:0}
+    .fact:last-child{border:0}
+    .fact small{display:block;margin-bottom:7px;color:var(--blue);font:700 .65rem Manrope,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    .fact strong{font:600 .98rem Manrope,sans-serif}
 
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding: 8.8rem 0 5.5rem;
-    }
-    .hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(3rem, 7vw, 7rem); align-items: center; }
-    .status-line {
-      display: inline-flex;
-      align-items: center;
-      gap: .65rem;
-      margin-bottom: 1.55rem;
-      color: #b8c3ca;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-    .status-line::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--copper); box-shadow: 0 0 18px rgba(211,155,97,.55); }
-    h1 {
-      max-width: 760px;
-      margin: 0;
-      font-size: clamp(3.35rem, 7.6vw, 7.3rem);
-      font-weight: 610;
-      letter-spacing: -.065em;
-      line-height: .9;
-    }
-    h1 .serif { color: var(--copper); font-weight: 400; font-style: italic; }
-    .hero-copy { max-width: 660px; margin: 1.8rem 0 0; color: #aab5bc; font-size: clamp(1.05rem, 1.45vw, 1.24rem); line-height: 1.75; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
-    .button {
-      min-height: 3.25rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .7rem;
-      padding: .8rem 1.2rem;
-      border: 1px solid var(--line-strong);
-      border-radius: 999px;
-      font-size: .9rem;
-      font-weight: 740;
-      transition: transform .25s ease, border-color .25s ease, background .25s ease;
-    }
-    .button:hover { transform: translateY(-2px); border-color: rgba(211,155,97,.55); }
-    .button-primary { color: #111820; border-color: var(--copper); background: var(--copper); }
-    .button-primary:hover { background: #e1aa72; }
-    .button-secondary { background: rgba(255,255,255,.025); }
+    .intro-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:100px;align-items:start}
+    .intro-copy{position:sticky;top:130px}
+    .intro-copy .lead{margin:28px 0 0;max-width:500px}
+    .platform-list{display:grid;gap:14px}
+    .platform-row{display:grid;grid-template-columns:54px 1fr;gap:20px;padding:28px;border:1px solid var(--line);border-radius:22px;background:white;box-shadow:0 10px 34px rgba(31,84,145,.06);transition:.25s}
+    .platform-row:hover{transform:translateX(-7px);border-color:rgba(27,102,229,.3);box-shadow:0 18px 44px rgba(31,84,145,.1)}
+    .platform-row .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;color:var(--blue);background:var(--sky)}
+    .platform-row:nth-child(2) .icon{color:var(--teal);background:var(--mint)}
+    .platform-row:nth-child(3) .icon{color:var(--coral);background:var(--peach)}
+    .platform-row h3{margin:3px 0 10px}
+    .platform-row p{margin:0;color:var(--muted);font-size:.9rem}
 
-    .system-card {
-      position: relative;
-      min-height: 32rem;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 2rem;
-      background:
-        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
-        linear-gradient(145deg, rgba(134,173,186,.09), rgba(13,20,27,.74));
-      background-size: 3rem 3rem, 3rem 3rem, auto;
-      box-shadow: 0 50px 120px rgba(0,0,0,.32);
-    }
-    .system-card::after {
-      content: "";
-      position: absolute;
-      inset: 18%;
-      border: 1px solid rgba(211,155,97,.25);
-      border-radius: 50%;
-      animation: orbit 18s linear infinite;
-    }
-    .system-card::before {
-      content: "";
-      position: absolute;
-      inset: 31%;
-      border: 1px dashed rgba(134,173,186,.25);
-      border-radius: 50%;
-      animation: orbit 12s linear infinite reverse;
-    }
-    @keyframes orbit { to { transform: rotate(360deg); } }
-    .system-label { position: absolute; top: 1.4rem; left: 1.4rem; z-index: 2; font-size: .76rem; color: var(--quiet); letter-spacing: .14em; text-transform: uppercase; }
-    .system-center {
-      position: absolute;
-      inset: 50% auto auto 50%;
-      z-index: 2;
-      width: 9.5rem;
-      height: 9.5rem;
-      display: grid;
-      place-items: center;
-      transform: translate(-50%, -50%);
-      border: 1px solid rgba(211,155,97,.4);
-      border-radius: 50%;
-      background: rgba(7,11,16,.88);
-      box-shadow: 0 0 70px rgba(211,155,97,.11);
-    }
-    .system-center strong { font-family: Georgia, serif; font-size: 2.25rem; font-weight: 400; letter-spacing: .08em; }
-    .node {
-      position: absolute;
-      z-index: 3;
-      padding: .56rem .75rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: #c2ccd1;
-      background: rgba(7,11,16,.86);
-      font-size: .72rem;
-      font-weight: 720;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .node-1 { top: 18%; left: 13%; }
-    .node-2 { top: 20%; right: 11%; }
-    .node-3 { bottom: 19%; left: 10%; }
-    .node-4 { right: 12%; bottom: 17%; }
-    .system-note { position: absolute; right: 1.4rem; bottom: 1.25rem; z-index: 3; color: var(--quiet); font-size: .75rem; }
+    .portfolio{background:white;overflow:hidden}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:60px;margin-bottom:62px}
+    .section-head .lead{max-width:500px;margin:0}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(225px,auto);gap:18px}
+    .venture{position:relative;overflow:hidden;padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:var(--canvas);transition:transform .25s,box-shadow .25s}
+    .venture:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+    .venture .num{display:block;margin-bottom:36px;color:var(--blue);font:700 .68rem Manrope,sans-serif;letter-spacing:.11em}
+    .venture p{margin:12px 0 0;color:var(--muted);font-size:.88rem;max-width:390px}
+    .venture .tag{position:absolute;right:22px;top:22px;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.7);font-size:.66rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .venture-platform{grid-column:span 7;min-height:315px;color:white;background:linear-gradient(135deg,var(--blue),#418ff2);border:0}
+    .venture-platform .num,.venture-platform p{color:rgba(255,255,255,.74)}
+    .venture-platform h3{font-size:clamp(2rem,3.4vw,3.5rem);max-width:560px}
+    .venture-platform:after{content:"";position:absolute;width:300px;height:300px;border:1px solid rgba(255,255,255,.2);border-radius:50%;right:-90px;bottom:-160px;box-shadow:0 0 0 45px rgba(255,255,255,.05),0 0 0 90px rgba(255,255,255,.03)}
+    .venture-ai{grid-column:span 5;background:var(--sky)}
+    .venture-industry{grid-column:span 5;min-height:330px;padding:0;color:white;border:0}
+    .venture-industry img,.venture-health img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .venture-industry:after,.venture-health:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,43,80,.05),rgba(11,43,80,.78))}
+    .venture-image-copy{position:absolute;left:28px;right:28px;bottom:28px;z-index:2}
+    .venture-image-copy p{color:rgba(255,255,255,.74)}
+    .venture-energy{grid-column:span 7;background:linear-gradient(135deg,#fff7d7,#fffdf4)}
+    .venture-health{grid-column:span 7;min-height:330px;padding:0;color:white;border:0}
+    .venture-opportunity{grid-column:span 5;background:var(--mint)}
 
-    .fact-strip { border-block: 1px solid var(--line); background: rgba(255,255,255,.014); }
-    .facts { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .fact { padding: 1.45rem 1.7rem; border-right: 1px solid var(--line); }
-    .fact:last-child { border-right: 0; }
-    .fact dt { color: var(--quiet); font-size: .72rem; font-weight: 740; letter-spacing: .14em; text-transform: uppercase; }
-    .fact dd { margin: .35rem 0 0; color: #dce1e4; font-size: .98rem; font-weight: 650; }
+    .operating{background:linear-gradient(180deg,#f5faff,#e9f5ff)}
+    .operating-grid{display:grid;grid-template-columns:320px 1fr;gap:68px;margin-top:60px}
+    .stage-tabs{display:flex;flex-direction:column;gap:10px}
+    .stage-tab{position:relative;padding:18px 20px;border:1px solid transparent;border-radius:16px;color:var(--muted);background:transparent;text-align:left;cursor:pointer;transition:.25s}
+    .stage-tab span{display:block;margin-bottom:6px;color:var(--blue);font:700 .66rem Manrope,sans-serif;letter-spacing:.1em}
+    .stage-tab strong{font:600 1rem Manrope,sans-serif}
+    .stage-tab:hover,.stage-tab[aria-selected="true"]{color:var(--ink);border-color:var(--line);background:white;box-shadow:0 12px 34px rgba(31,84,145,.07)}
+    .stage-panel{position:relative;min-height:420px;padding:62px;border-radius:34px;background:white;box-shadow:var(--shadow);overflow:hidden}
+    .stage-panel:before{content:"";position:absolute;right:-80px;top:-120px;width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,rgba(92,169,255,.2),rgba(18,154,149,.11))}
+    .stage-panel small{color:var(--coral);font:700 .7rem Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+    .stage-panel h3{margin:22px 0;font-size:clamp(2.3rem,4vw,4.2rem);max-width:660px}
+    .stage-panel>p{max-width:720px;color:var(--muted);font-size:1.04rem}
+    .stage-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .stage-meta span{padding:9px 13px;border-radius:999px;color:var(--blue);background:var(--sky);font-size:.76rem;font-weight:600}
 
-    section { padding: clamp(5.5rem, 10vw, 9rem) 0; }
-    .section-head { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem; align-items: end; margin-bottom: 3.4rem; }
-    .section-head h2 { max-width: 780px; margin: 0; font-size: clamp(2.5rem, 5.2vw, 4.7rem); line-height: 1.02; letter-spacing: -.045em; }
-    .section-head p:last-child { max-width: 590px; justify-self: end; margin: 0; color: var(--muted); font-size: 1.06rem; line-height: 1.8; }
+    .human{background:white}
+    .human-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+    .human-visual{position:relative;min-height:610px}
+    .human-visual img{width:88%;height:570px;object-fit:cover;border-radius:34px 180px 34px 34px;box-shadow:var(--shadow)}
+    .human-card{position:absolute;right:0;bottom:0;width:285px;padding:26px;border-radius:22px;background:var(--peach);box-shadow:0 18px 50px rgba(95,61,53,.14)}
+    .human-card small{display:block;color:var(--coral);font:700 .68rem Manrope,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+    .human-card strong{display:block;margin-top:12px;font:600 1.2rem Manrope,sans-serif;line-height:1.35}
+    .human-copy .lead{margin:28px 0 36px}
+    .principles{display:grid;gap:0;border-top:1px solid var(--line)}
+    .principle{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:21px 0;border-bottom:1px solid var(--line)}
+    .principle b{color:var(--blue);font:700 .7rem Manrope,sans-serif}
+    .principle strong{display:block;font:600 1rem Manrope,sans-serif}
+    .principle span{display:block;margin-top:6px;color:var(--muted);font-size:.84rem}
 
-    .focus-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
-    .focus-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 20rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 1.65rem;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.012));
-      transition: transform .35s ease, border-color .35s ease, background .35s ease;
+    .contact{padding:82px 0}
+    .contact-panel{position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;padding:76px;border-radius:38px;color:white;background:linear-gradient(135deg,#175fd6,#2386ef 62%,#36a9b2);box-shadow:0 35px 90px rgba(27,102,229,.22)}
+    .contact-panel:after{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-150px;top:-230px;border:1px solid rgba(255,255,255,.22);box-shadow:0 0 0 65px rgba(255,255,255,.05),0 0 0 130px rgba(255,255,255,.025)}
+    .contact-panel h2{position:relative;z-index:2}
+    .contact-copy{position:relative;z-index:2}
+    .contact-copy p{color:rgba(255,255,255,.75)}
+    .email{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;padding:20px 0;border-top:1px solid rgba(255,255,255,.3);border-bottom:1px solid rgba(255,255,255,.3);font:600 clamp(.95rem,1.4vw,1.2rem) Manrope,sans-serif;overflow-wrap:anywhere}
+    .email svg{width:23px;flex:0 0 auto;transition:transform .25s}
+    .email:hover svg{transform:translate(4px,-4px)}
+
+    footer{padding:58px 0 38px;background:#eaf4fb;border-top:1px solid var(--line)}
+    .footer-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:90px}
+    .footer-brand{font:700 1.1rem Manrope,sans-serif}
+    .footer-note{margin:0;color:var(--muted);font-size:.82rem;line-height:1.72}
+    .credits{margin-top:22px;color:#7b8ea6;font-size:.68rem}
+    .credits a{text-decoration:underline;text-underline-offset:3px}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;margin-top:34px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:.75rem}
+
+    @media(max-width:1040px){
+      .hero-grid{gap:34px}.hero-visual{min-height:590px}.photo-chip{width:180px;height:180px}.photo-manufacturing{width:210px;height:165px}
+      .intro-grid{gap:56px}.stage-panel{padding:48px}.contact-panel{padding:60px}
     }
-    .focus-card::before {
-      content: "";
-      position: absolute;
-      width: 11rem;
-      height: 11rem;
-      right: -5rem;
-      top: -5rem;
-      border: 1px solid rgba(211,155,97,.16);
-      border-radius: 50%;
-      transition: transform .5s ease, border-color .5s ease;
+    @media(max-width:860px){
+      .wrap{width:min(100% - 32px,720px)}.section{padding:90px 0}
+      .menu-toggle{display:grid;place-items:center}.nav-links{position:fixed;top:82px;left:16px;right:16px;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:20px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.97);box-shadow:var(--shadow);opacity:0;transform:translateY(-14px);pointer-events:none;transition:.25s}.menu-open .nav-links{opacity:1;transform:none;pointer-events:auto}.nav-links a{padding:15px}.nav-cta{text-align:center;margin-top:8px}
+      .hero-grid,.intro-grid,.human-grid,.contact-panel{grid-template-columns:1fr}.hero{padding-top:120px}.hero-visual{min-height:650px}.photo-main{inset:0 7% 70px}.intro-copy{position:static}.section-head{display:block}.section-head .lead{margin-top:22px}
+      .venture-platform,.venture-ai,.venture-industry,.venture-energy,.venture-health,.venture-opportunity{grid-column:span 12}
+      .operating-grid{grid-template-columns:1fr}.stage-tabs{display:grid;grid-template-columns:repeat(2,1fr)}.human-copy{order:-1}.footer-grid{grid-template-columns:1fr;gap:28px}
     }
-    .focus-card:hover { transform: translateY(-6px); border-color: rgba(211,155,97,.34); background: linear-gradient(145deg, rgba(211,155,97,.075), rgba(255,255,255,.016)); }
-    .focus-card:hover::before { transform: scale(1.16); border-color: rgba(211,155,97,.34); }
-    .focus-card:nth-child(1), .focus-card:nth-child(4) { grid-column: span 8; }
-    .focus-card:nth-child(2), .focus-card:nth-child(3) { grid-column: span 4; }
-    .focus-card:nth-child(5) { grid-column: span 7; }
-    .focus-card:nth-child(6) { grid-column: span 5; }
-    .focus-card:nth-child(2), .focus-card:nth-child(5) { background: linear-gradient(145deg, rgba(134,173,186,.075), rgba(255,255,255,.012)); }
-    .card-index { color: var(--quiet); font-size: .76rem; font-weight: 740; letter-spacing: .14em; }
-    .focus-card h3 { margin: 0 0 .8rem; font-family: Georgia, serif; font-size: clamp(1.65rem, 3vw, 2.45rem); font-weight: 400; }
-    .focus-card p { max-width: 520px; margin: 0; color: var(--muted); font-size: .98rem; line-height: 1.72; }
-
-    .pathway { background: rgba(255,255,255,.014); border-block: 1px solid var(--line); }
-    .path-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(2rem, 6vw, 6rem); align-items: start; }
-    .path-intro { position: sticky; top: 7rem; }
-    .path-intro h2 { margin: .85rem 0 1.2rem; font-size: clamp(2.5rem, 4.6vw, 4.4rem); line-height: 1.02; letter-spacing: -.045em; }
-    .path-intro > p:last-of-type { max-width: 520px; color: var(--muted); font-size: 1.06rem; line-height: 1.8; }
-    .path-tabs { display: grid; gap: .65rem; }
-    .path-tab {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 3rem 1fr auto;
-      gap: 1rem;
-      align-items: center;
-      padding: 1.15rem 1.2rem;
-      border: 1px solid var(--line);
-      border-radius: 1rem;
-      text-align: left;
-      cursor: pointer;
-      background: rgba(255,255,255,.018);
-      transition: border-color .25s ease, background .25s ease;
+    @media(max-width:560px){
+      .wrap{width:min(100% - 24px,520px)}.site-header{height:72px}.nav-links{top:72px}.brand-copy{font-size:.85rem}.brand-mark{width:36px;height:36px;border-radius:12px}
+      h1{font-size:clamp(3.3rem,17vw,4.6rem)}h2{font-size:2.55rem}.hero{padding-top:104px}.hero-actions{flex-direction:column;align-items:stretch}.button{width:100%}.hero-visual{min-height:520px}.photo-main{inset:0 0 52px;border-radius:130px 130px 28px 28px}.photo-chip{width:125px;height:125px;right:-4px;top:8px}.photo-manufacturing{width:150px;height:120px}.hero-fact{width:220px;right:8px;padding:16px}.fact-grid{grid-template-columns:1fr}.fact,.fact:first-child{padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}
+      .platform-row{grid-template-columns:1fr}.portfolio-grid{display:block}.venture{margin-bottom:14px;min-height:260px}.venture-industry,.venture-health{min-height:340px}.stage-tabs{grid-template-columns:1fr}.stage-panel{padding:34px 24px;min-height:470px}.stage-panel h3{font-size:2.55rem}.human-visual{min-height:520px}.human-visual img{width:100%;height:480px;border-radius:28px 120px 28px 28px}.human-card{right:8px;width:230px;padding:20px}.contact{padding:54px 0}.contact-panel{padding:44px 24px;border-radius:26px}.footer-bottom{flex-direction:column}
     }
-    .path-tab:hover, .path-tab[aria-selected="true"] { border-color: rgba(211,155,97,.4); background: var(--copper-soft); }
-    .tab-num { color: var(--copper); font-size: .77rem; font-weight: 760; letter-spacing: .1em; }
-    .tab-title { font-size: 1rem; font-weight: 720; }
-    .tab-arrow { color: var(--quiet); }
-    .path-panel { margin-top: 1rem; padding: 1.6rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--panel-solid); }
-    .path-panel h3 { margin: 0; font-family: Georgia, serif; font-size: 2rem; font-weight: 400; }
-    .path-panel p { margin: .8rem 0 0; color: var(--muted); }
-
-    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .principle { padding: 1.6rem; border-top: 1px solid var(--line-strong); }
-    .principle span { color: var(--steel); font-size: .74rem; font-weight: 740; letter-spacing: .14em; text-transform: uppercase; }
-    .principle h3 { margin: 1.2rem 0 .75rem; font-size: 1.18rem; }
-    .principle p { margin: 0; color: var(--muted); font-size: .96rem; }
-
-    .contact-card {
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap: clamp(2rem, 7vw, 7rem);
-      padding: clamp(2rem, 6vw, 5.5rem);
-      border: 1px solid var(--line);
-      border-radius: 2rem;
-      background:
-        radial-gradient(circle at 100% 0%, rgba(211,155,97,.16), transparent 30rem),
-        linear-gradient(135deg, rgba(134,173,186,.1), rgba(211,155,97,.06) 68%, rgba(255,255,255,.025));
-    }
-    .contact-card::after { content: "N"; position: absolute; right: -1.5rem; bottom: -7rem; color: rgba(255,255,255,.025); font-family: Georgia, serif; font-size: 26rem; line-height: 1; pointer-events: none; }
-    .contact-copy, .contact-details { position: relative; z-index: 2; }
-    .contact-copy h2 { margin: .8rem 0 1.1rem; font-size: clamp(2.55rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.05em; }
-    .contact-copy p:last-child { max-width: 610px; color: var(--muted); font-size: 1.03rem; }
-    .contact-details { display: grid; align-content: center; }
-    .contact-channel {
-      display: block;
-      padding: 1.55rem;
-      border: 1px solid rgba(226,234,239,.19);
-      border-radius: 1.25rem;
-      background: rgba(7,11,16,.58);
-      box-shadow: 0 28px 70px rgba(0,0,0,.2);
-      transition: transform .3s ease, border-color .3s ease, background .3s ease;
-    }
-    .contact-channel:hover { transform: translateY(-4px); border-color: rgba(211,155,97,.5); background: rgba(7,11,16,.76); }
-    .contact-channel small { display: block; margin-bottom: .75rem; color: var(--copper); font-size: .7rem; font-weight: 760; letter-spacing: .16em; text-transform: uppercase; }
-    .contact-channel strong { display: flex; justify-content: space-between; align-items: center; gap: 1rem; overflow-wrap: anywhere; font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 620; }
-    .contact-channel i { color: var(--copper); font-family: Georgia, serif; font-size: 1.45rem; font-style: normal; }
-    .contact-context { margin: 1rem 0 0; color: var(--quiet); font-size: .78rem; line-height: 1.7; letter-spacing: .04em; }
-
-    footer { padding: 2.2rem 0 2.6rem; border-top: 1px solid var(--line); }
-    .footer-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 2rem; align-items: start; }
-    .footer-brand { font-weight: 740; }
-    .legal-note { margin: 0; color: var(--quiet); font-size: .8rem; line-height: 1.7; }
-
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
-    .reveal.in-view { opacity: 1; transform: none; }
-
-    @media (max-width: 900px) {
-      .nav-links a:not(.nav-cta) { display: none; }
-      .hero-grid, .section-head, .path-grid, .contact-card, .footer-grid { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .system-card { min-height: 28rem; }
-      .section-head p:last-child { justify-self: start; }
-      .facts { grid-template-columns: 1fr; }
-      .fact { border-right: 0; border-bottom: 1px solid var(--line); }
-      .fact:last-child { border-bottom: 0; }
-      .focus-card:nth-child(n) { grid-column: span 6; }
-      .path-intro { position: static; }
-      .principles { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .shell { width: min(calc(100% - 1.2rem), var(--max)); }
-      .site-header { position: absolute; }
-      .working-name { display: none; }
-      .nav-cta { padding-inline: .85rem; }
-      .hero { padding-top: 7.1rem; }
-      h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
-      .hero-actions { align-items: stretch; }
-      .button { width: 100%; }
-      .system-card { min-height: 24rem; border-radius: 1.35rem; }
-      .system-center { width: 7.4rem; height: 7.4rem; }
-      .system-center strong { font-size: 1.7rem; }
-      .node { font-size: .61rem; }
-      .node-1 { left: 6%; }
-      .node-2 { right: 5%; }
-      .node-3 { left: 5%; }
-      .node-4 { right: 5%; }
-      .focus-grid { display: grid; grid-template-columns: 1fr; }
-      .focus-card:nth-child(n) { grid-column: 1; min-height: 17rem; }
-      .path-tab { grid-template-columns: 2.4rem 1fr auto; padding-inline: .95rem; }
-      .contact-card { border-radius: 1.35rem; }
-      .contact-card::after { font-size: 17rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-      .reveal { opacity: 1; transform: none; }
-    }
+    @media(pointer:coarse){.cursor-glow{display:none}.fx-card{transform:none!important}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.cursor-glow,.tech-ripple{display:none}.fx-card{transform:none!important}}
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav shell" aria-label="Primary navigation">
+  <div class="scroll-line" id="scroll-line" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <header class="site-header" id="header">
+    <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Nova Group home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span class="brand-name">Nova Group <span class="working-name">Working name</span></span>
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 24V8l9 11 9-11v16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy">Nova Group<small>Raleigh, North Carolina</small></span>
       </a>
-      <div class="nav-links">
-        <a href="#platform">Platform</a>
-        <a href="#focus">Focus</a>
-        <a href="#approach">Approach</a>
-        <a class="nav-cta" href="#contact">Start a conversation</a>
-      </div>
-    </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M4 16h16"/></svg></button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#platform">Platform</a><a href="#portfolio">Areas</a><a href="#model">Model</a><a href="#principles">Principles</a><a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-grid shell">
-        <div class="reveal">
-          <div class="status-line">Company in formation · Raleigh, North Carolina</div>
-          <h1>One platform. <span class="serif">Multiple ventures.</span> Built to move.</h1>
-          <p class="hero-copy">Nova Group is being formed as a multi-project venture development and execution platform—built to evaluate opportunities, shape operating pathways, assemble the right capabilities, and advance selected projects with discipline.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#platform">Explore the portfolio model <span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="mailto:emineasan545@outlook.com">Contact Nova Group <span aria-hidden="true">↗</span></a>
-          </div>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy reveal">
+          <span class="status"><i></i>Company in formation</span>
+          <h1>Ideas become <span>operating ventures.</span></h1>
+          <p class="lead">Nova Group is being formed as a multi-project venture development and execution platform. We evaluate opportunities, shape practical pathways and assemble the capabilities required to move selected projects forward.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#portfolio">Explore the platform <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a><a class="button button-secondary" href="#model">How we work</a></div>
         </div>
-
-        <div class="system-card reveal" aria-label="Nova Group operating pathway illustration">
-          <span class="system-label">Portfolio operating system / 01</span>
-          <div class="system-center"><strong>NOVA</strong></div>
-          <span class="node node-1">Discover</span>
-          <span class="node node-2">Structure</span>
-          <span class="node node-3">Build</span>
-          <span class="node node-4">Scale</span>
-          <span class="system-note">A common discipline across every project</span>
+        <div class="hero-visual reveal" aria-label="Clinical, manufacturing and semiconductor technology imagery">
+          <figure class="photo-card photo-main fx-card"><img src="https://images.pexels.com/photos/6303645/pexels-photo-6303645.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1500" alt="Clinician discussing a diagnosis with a patient"><span class="image-label">Clinical context</span></figure>
+          <figure class="photo-card photo-manufacturing fx-card"><img src="https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Engineers collaborating in a technology workshop"></figure>
+          <figure class="photo-card photo-chip fx-card"><img src="https://images.pexels.com/photos/5118460/pexels-photo-5118460.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900" alt="Gloved engineer examining advanced electronic material"></figure>
+          <div class="hero-fact"><small>Operating focus</small><strong>Evaluate clearly. Structure responsibly. Build with the right people.</strong></div>
         </div>
       </div>
     </section>
 
-    <div class="fact-strip" id="platform">
-      <dl class="facts shell">
-        <div class="fact"><dt>Mandate</dt><dd>Multi-project venture development and execution</dd></div>
-        <div class="fact"><dt>Base</dt><dd>Raleigh, North Carolina · United States</dd></div>
-        <div class="fact"><dt>Model</dt><dd>Evaluate · Structure · Build · Scale</dd></div>
-      </dl>
-    </div>
+    <section class="factbar"><div class="wrap fact-grid"><div class="fact"><small>Mandate</small><strong>Multi-project venture development and execution</strong></div><div class="fact"><small>Base</small><strong>Raleigh, North Carolina</strong></div><div class="fact"><small>Model</small><strong>Evaluate · Structure · Build · Scale</strong></div></div></section>
 
-    <section id="focus">
-      <div class="shell">
-        <div class="section-head reveal">
-          <div><p class="eyebrow">Portfolio architecture</p><h2>Built for a portfolio, not a single category.</h2></div>
-          <p>Nova Group is designed to evaluate and advance multiple projects through one operating framework. Current areas of interest reflect confirmed work in technology, industry, energy, and selected medical innovation—without limiting the platform to any single sector.</p>
-        </div>
-        <div class="focus-grid">
-          <article class="focus-card reveal"><span class="card-index">01 / Portfolio platform</span><div><h3>One operating system for multiple ventures</h3><p>Creating a shared framework for opportunity assessment, project design, leadership alignment, execution planning, and responsible scale.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">02 / AI</span><div><h3>Applied intelligence</h3><p>Evaluating AI where it can strengthen decisions, operating visibility, and execution quality across the portfolio.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">03 / Industry</span><div><h3>Advanced manufacturing and automation</h3><p>Connecting technical requirements, manufacturing systems, robotics, controls, and scalable operating readiness.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">04 / Energy</span><div><h3>Energy technologies and infrastructure pathways</h3><p>Assessing technically credible opportunities that require disciplined development, operating coordination, and long-term execution.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">05 / Health</span><div><h3>Selected medical technologies</h3><p>Advancing carefully selected opportunities where technical depth, regulatory awareness, responsible commercialization, and operating discipline must move together.</p></div></article>
-          <article class="focus-card reveal"><span class="card-index">06 / Opportunity</span><div><h3>Selected new ventures</h3><p>Considering additional projects only when evidence, leadership, timing, and the pathway to execution are sufficiently clear.</p></div></article>
-        </div>
+    <section class="section" id="platform"><div class="wrap intro-grid">
+      <div class="intro-copy reveal"><p class="kicker">Portfolio platform</p><h2>Built to examine more than one kind of opportunity</h2><p class="lead">Different sectors require different expertise. The platform provides a consistent way to test relevance, define the venture and decide what deserves sustained attention.</p></div>
+      <div class="platform-list reveal">
+        <article class="platform-row fx-card"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18V8m6 10V4m6 14v-7m4 7H2"/></svg></span><div><h3>Opportunity before narrative</h3><p>We examine the problem, customer, adoption conditions and execution risk before committing to a story.</p></div></article>
+        <article class="platform-row fx-card"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span><div><h3>Capability before scale</h3><p>We align domain expertise, operating ownership and partner capacity before expanding the fixed-cost base.</p></div></article>
+        <article class="platform-row fx-card"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12 9 16 19 6"/></svg></span><div><h3>Governance through the build</h3><p>Milestones, evidence and explicit decision rights keep each selected project accountable as it develops.</p></div></article>
       </div>
-    </section>
+    </div></section>
 
-    <section class="pathway" id="approach">
-      <div class="path-grid shell">
-        <div class="path-intro reveal">
-          <p class="eyebrow">Portfolio operating model</p>
-          <h2>Different projects. One standard of execution.</h2>
-          <p>Each opportunity may begin in a different sector, but the questions remain consistent: Is it credible? Who owns the work? What must align? And what is required to build responsibly?</p>
-        </div>
-        <div class="reveal">
-          <div class="path-tabs" role="tablist" aria-label="Nova Group operating stages">
-            <button class="path-tab" id="tab-assess" role="tab" aria-selected="true" aria-controls="path-panel" data-title="Qualify the opportunity" data-copy="Examine credibility, strategic relevance, execution risk, and the conditions required for a responsible next decision."><span class="tab-num">01</span><span class="tab-title">Qualify the opportunity</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-design" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Structure the venture" data-copy="Define ownership, milestones, operating requirements, leadership needs, and the pathway from concept to execution."><span class="tab-num">02</span><span class="tab-title">Structure the venture</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-build" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Align people and capabilities" data-copy="Bring the right technical, operating, commercial, and leadership capabilities together around clear responsibilities and measurable outcomes."><span class="tab-num">03</span><span class="tab-title">Align people and capabilities</span><span class="tab-arrow">↘</span></button>
-            <button class="path-tab" id="tab-scale" role="tab" aria-selected="false" aria-controls="path-panel" data-title="Build with governance" data-copy="Advance selected projects with visible ownership, disciplined decisions, and structures designed for durable growth."><span class="tab-num">04</span><span class="tab-title">Build with governance</span><span class="tab-arrow">↘</span></button>
-          </div>
-          <div class="path-panel" id="path-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-assess">
-            <h3>Qualify the opportunity</h3>
-            <p>Examine credibility, strategic relevance, execution risk, and the conditions required for a responsible next decision.</p>
-          </div>
-        </div>
+    <section class="section portfolio" id="portfolio"><div class="wrap">
+      <div class="section-head reveal"><div><p class="kicker">Current areas of interest</p><h2>A broad mandate.<br>Selective commitment.</h2></div><p class="lead">These areas reflect the platform’s present evaluation scope. They do not represent launched subsidiaries, approved products or a promise to enter every category.</p></div>
+      <div class="portfolio-grid reveal">
+        <article class="venture venture-platform fx-card"><span class="num">01 / PLATFORM</span><span class="tag">Core model</span><h3>One operating system for multiple ventures</h3><p>Shared evaluation, governance, talent alignment and execution discipline across a selected portfolio.</p></article>
+        <article class="venture venture-ai fx-card"><span class="num">02 / AI</span><span class="tag">Applied intelligence</span><h3>AI that improves a defined decision or workflow</h3><p>Selected applications where data quality, adoption and accountable use can be clearly understood.</p></article>
+        <article class="venture venture-industry fx-card"><img src="https://images.pexels.com/photos/3862129/pexels-photo-3862129.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Engineers discussing a manufacturing project" loading="lazy"><div class="venture-image-copy"><span class="num">03 / INDUSTRY</span><h3>Advanced manufacturing and automation</h3><p>Industrial systems, production technology and capability-led scale.</p></div></article>
+        <article class="venture venture-energy fx-card"><span class="num">04 / ENERGY</span><span class="tag">Infrastructure</span><h3>Energy technologies and infrastructure pathways</h3><p>Opportunities where technical relevance, project economics and operating partnerships can be evaluated together.</p></article>
+        <article class="venture venture-health fx-card"><img src="https://images.pexels.com/photos/5215006/pexels-photo-5215006.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Doctors reviewing medical imaging on a laptop" loading="lazy"><div class="venture-image-copy"><span class="num">05 / HEALTH</span><h3>Selected medical technologies</h3><p>Clinically relevant concepts approached with evidence, quality and patient context in view.</p></div></article>
+        <article class="venture venture-opportunity fx-card"><span class="num">06 / OPPORTUNITY</span><span class="tag">Selective</span><h3>New ventures that fit the platform</h3><p>Additional opportunities may enter evaluation when the problem, leadership need and path to execution are credible.</p></article>
       </div>
-    </section>
+    </div></section>
 
-    <section>
-      <div class="shell">
-        <div class="section-head reveal">
-          <div><p class="eyebrow">Institutional discipline</p><h2>Clarity before commitment.</h2></div>
-          <p>Nova Group is still in formation. Across a multi-project platform, credibility depends on distinguishing what is confirmed, what is under evaluation, and what must wait until it can be verified.</p>
+    <section class="section operating" id="model"><div class="wrap">
+      <div class="section-head reveal"><div><p class="kicker">Operating model</p><h2>Different projects.<br>One standard of execution.</h2></div><p class="lead">The platform uses a consistent sequence to reduce ambiguity and give each selected venture the right level of attention.</p></div>
+      <div class="operating-grid reveal">
+        <div class="stage-tabs" role="tablist" aria-label="Operating stages">
+          <button class="stage-tab" id="tab-qualify" role="tab" aria-selected="true" data-key="qualify"><span>01</span><strong>Qualify the opportunity</strong></button>
+          <button class="stage-tab" id="tab-structure" role="tab" aria-selected="false" data-key="structure"><span>02</span><strong>Structure the venture</strong></button>
+          <button class="stage-tab" id="tab-align" role="tab" aria-selected="false" data-key="align"><span>03</span><strong>Align people and capabilities</strong></button>
+          <button class="stage-tab" id="tab-build" role="tab" aria-selected="false" data-key="build"><span>04</span><strong>Build with governance</strong></button>
         </div>
-        <div class="principles">
-          <article class="principle reveal"><span>01 / Portfolio</span><h3>Selection before expansion</h3><p>New projects enter the portfolio only when their relevance, risks, and execution requirements can be understood clearly.</p></article>
-          <article class="principle reveal"><span>02 / People</span><h3>Capability before title</h3><p>We are beginning conversations with experienced leaders who can support long-term organizational and project growth.</p></article>
-          <article class="principle reveal"><span>03 / Execution</span><h3>Ownership before speed</h3><p>Good decisions are made in the right order, with responsibilities, dependencies, and risk visible from the start.</p></article>
-        </div>
+        <article class="stage-panel" id="stage-panel" role="tabpanel" aria-live="polite" aria-labelledby="tab-qualify"><small id="stage-kicker">Stage 01 · Evaluation</small><h3 id="stage-title">Clarity before commitment</h3><p id="stage-copy">We examine the problem, market context, adoption conditions and material execution risks. The purpose is to decide whether the opportunity deserves a structured next step.</p><div class="stage-meta" id="stage-meta"><span>Problem relevance</span><span>Market conditions</span><span>Execution risk</span></div></article>
       </div>
-    </section>
+    </div></section>
 
-    <section id="contact">
-      <div class="contact-card shell reveal">
-        <div class="contact-copy">
-          <p class="eyebrow">Private point of entry</p>
-          <h2>One address. The right conversation.</h2>
-          <p>For project opportunities, strategic relationships, and senior leadership conversations, contact Nova Group through a single confidential channel.</p>
-        </div>
-        <div class="contact-details">
-          <a class="contact-channel" href="mailto:emineasan545@outlook.com"><small>Direct correspondence</small><strong><span>emineasan545@outlook.com</span><i aria-hidden="true">↗</i></strong></a>
-          <p class="contact-context">Project introductions · Strategic relationships · Leadership conversations</p>
-        </div>
-      </div>
-    </section>
+    <section class="section human" id="principles"><div class="wrap human-grid">
+      <div class="human-visual reveal"><img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Doctor and patient having a thoughtful consultation" loading="lazy"><div class="human-card"><small>Why it matters</small><strong>Technology earns relevance when it works for real people in real environments.</strong></div></div>
+      <div class="human-copy reveal"><p class="kicker">Operating principles</p><h2>Human judgment remains part of the system</h2><p class="lead">Nova Group is still in formation. Credibility begins with distinguishing what is confirmed, what is under evaluation and what must wait until it can be verified.</p><div class="principles">
+        <div class="principle"><b>01</b><div><strong>Selection before expansion</strong><span>We do not need every opportunity to become a project.</span></div></div>
+        <div class="principle"><b>02</b><div><strong>Capability before title</strong><span>Responsibility should follow judgment, experience and the needs of the work.</span></div></div>
+        <div class="principle"><b>03</b><div><strong>Ownership before speed</strong><span>Clear decisions and accountable owners matter more than activity for its own sake.</span></div></div>
+      </div></div>
+    </div></section>
+
+    <section class="contact" id="contact"><div class="wrap contact-panel reveal"><h2>One address.<br>The right conversation.</h2><div class="contact-copy"><p>For project, capability and senior leadership conversations related to the platform’s current areas of interest.</p><a class="email" href="mailto:emineasan545@outlook.com"><span>emineasan545@outlook.com</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div></section>
   </main>
 
-  <footer>
-    <div class="footer-grid shell">
-      <div class="footer-brand">Nova Group <span class="working-name">Working name</span></div>
-      <p class="legal-note">Nova Group is a working name for a company currently in formation. The final legal entity name, registration number, registered address, principal business address, and verifiable incorporation records will be published after the formation process is complete. This website does not constitute an offer of securities or a binding offer of employment.</p>
-    </div>
-  </footer>
+  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand">Nova Group<br>Raleigh, North Carolina</div><p class="footer-note">Nova Group is a working name for a company currently in formation. The final legal entity name, registration number, registered address, principal business address and verifiable incorporation records will be published after the formation process is complete. This website does not constitute an offer of securities or a binding offer of employment.</p></div><div class="credits">Photography: <a href="https://www.pexels.com/photo/doctor-showing-diagnosis-to-black-woman-patient-in-hallway-of-clinic-6303645/" target="_blank" rel="noreferrer">Klaus Nielsen</a>, <a href="https://www.pexels.com/photo/engineers-in-workshop-3862129/" target="_blank" rel="noreferrer">ThisIsEngineering</a>, <a href="https://www.pexels.com/photo/doctors-examining-an-x-ray-image-on-a-laptop-5215006/" target="_blank" rel="noreferrer">Antoni Shkraba</a> and additional contributors via Pexels.</div><div class="footer-bottom"><span>© 2026 Nova Group</span><span>Working company profile</span></div></div></footer>
 
   <script>
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const revealItems = document.querySelectorAll('.reveal');
-    if (reducedMotion || !('IntersectionObserver' in window)) {
-      revealItems.forEach((item) => item.classList.add('in-view'));
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      revealItems.forEach((item) => observer.observe(item));
-    }
-
-    const tabs = [...document.querySelectorAll('[role="tab"]')];
-    const panel = document.getElementById('path-panel');
-    tabs.forEach((tab, index) => {
-      tab.addEventListener('click', () => activateTab(tab));
-      tab.addEventListener('keydown', (event) => {
-        if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) return;
-        event.preventDefault();
-        let next = index;
-        if (event.key === 'ArrowDown') next = (index + 1) % tabs.length;
-        if (event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
-        if (event.key === 'Home') next = 0;
-        if (event.key === 'End') next = tabs.length - 1;
-        tabs[next].focus();
-        activateTab(tabs[next]);
-      });
-    });
-
-    function activateTab(active) {
-      tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab === active)));
-      panel.setAttribute('aria-labelledby', active.id);
-      panel.querySelector('h3').textContent = active.dataset.title;
-      panel.querySelector('p').textContent = active.dataset.copy;
+    const stageData={
+      qualify:{kicker:"Stage 01 · Evaluation",title:"Clarity before commitment",copy:"We examine the problem, market context, adoption conditions and material execution risks. The purpose is to decide whether the opportunity deserves a structured next step.",meta:["Problem relevance","Market conditions","Execution risk"]},
+      structure:{kicker:"Stage 02 · Venture design",title:"Turn the opportunity into an operating thesis",copy:"We define the venture boundary, critical assumptions, decision rights and the work required to test the model without overstating certainty.",meta:["Venture boundary","Critical assumptions","Decision rights"]},
+      align:{kicker:"Stage 03 · Capability",title:"Put judgment close to the work",copy:"We identify the leadership, domain expertise, operating partners and technical capabilities that the selected venture actually requires.",meta:["Leadership","Domain expertise","Operating partners"]},
+      build:{kicker:"Stage 04 · Execution",title:"Advance through evidence and accountable milestones",copy:"Selected projects move through explicit work packages, ownership and review. Capital and capacity follow verified progress rather than presentation alone.",meta:["Work packages","Milestone evidence","Governance"]}
+    };
+    const tabs=[...document.querySelectorAll(".stage-tab")];
+    const panel=document.getElementById("stage-panel"),kicker=document.getElementById("stage-kicker"),title=document.getElementById("stage-title"),copy=document.getElementById("stage-copy"),meta=document.getElementById("stage-meta");
+    function selectStage(tab){const d=stageData[tab.dataset.key];tabs.forEach(t=>t.setAttribute("aria-selected",String(t===tab)));panel.setAttribute("aria-labelledby",tab.id);panel.animate([{opacity:.4,transform:"translateY(10px)"},{opacity:1,transform:"none"}],{duration:380,easing:"cubic-bezier(.2,.75,.25,1)"});kicker.textContent=d.kicker;title.textContent=d.title;copy.textContent=d.copy;meta.replaceChildren(...d.meta.map(x=>{const s=document.createElement("span");s.textContent=x;return s}))}
+    tabs.forEach((tab,i)=>{tab.addEventListener("click",()=>selectStage(tab));tab.addEventListener("keydown",e=>{if(!["ArrowDown","ArrowUp","ArrowRight","ArrowLeft"].includes(e.key))return;e.preventDefault();const n=["ArrowDown","ArrowRight"].includes(e.key)?1:-1;const next=tabs[(i+n+tabs.length)%tabs.length];next.focus();selectStage(next)})});
+    const reduced=matchMedia("(prefers-reduced-motion:reduce)").matches;const items=document.querySelectorAll(".reveal");if(reduced||!("IntersectionObserver" in window)){items.forEach(x=>x.classList.add("in-view"))}else{const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view");obs.unobserve(e.target)}}),{threshold:.12});items.forEach(x=>obs.observe(x))}
+    const header=document.getElementById("header"),toggle=document.getElementById("menu-toggle"),scrollLine=document.getElementById("scroll-line");function headerState(){header.classList.toggle("scrolled",scrollY>16);const max=document.documentElement.scrollHeight-innerHeight;scrollLine.style.width=(max>0?Math.min(100,scrollY/max*100):0)+"%"}headerState();addEventListener("scroll",headerState,{passive:true});toggle.addEventListener("click",()=>{const open=document.body.classList.toggle("menu-open");toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Close navigation":"Open navigation")});document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>{document.body.classList.remove("menu-open");toggle.setAttribute("aria-expanded","false")}));
+    if(matchMedia("(pointer:fine) and (prefers-reduced-motion:no-preference)").matches){
+      const glow=document.getElementById("cursor-glow"),hero=document.querySelector(".hero");let gx=innerWidth/2,gy=innerHeight/2,cx=gx,cy=gy;
+      addEventListener("pointermove",e=>{gx=e.clientX;gy=e.clientY;glow.style.opacity="1";hero.style.setProperty("--hero-x",(e.clientX/innerWidth*100)+"%");hero.style.setProperty("--hero-y",(e.clientY/innerHeight*100)+"%")},{passive:true});
+      (function moveGlow(){cx+=(gx-cx)*.12;cy+=(gy-cy)*.12;glow.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(moveGlow)})();
+      document.querySelectorAll(".fx-card").forEach(card=>{card.addEventListener("pointermove",e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;card.style.setProperty("--fx-x",x*100+"%");card.style.setProperty("--fx-y",y*100+"%");card.style.transform=`perspective(900px) rotateX(${(y-.5)*-5}deg) rotateY(${(x-.5)*6}deg) translateY(-4px)`});card.addEventListener("pointerleave",()=>card.style.transform="")});
+      document.querySelectorAll(".button,.nav-cta").forEach(el=>{el.addEventListener("pointermove",e=>{const r=el.getBoundingClientRect();el.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.12}px,${(e.clientY-r.top-r.height/2)*.16}px)`});el.addEventListener("pointerleave",()=>el.style.transform="")});
+      addEventListener("click",e=>{if(e.target.closest("a,button"))return;const ripple=document.createElement("span");ripple.className="tech-ripple";ripple.style.left=e.clientX+"px";ripple.style.top=e.clientY+"px";document.body.appendChild(ripple);setTimeout(()=>ripple.remove(),760)});
     }
   </script>
 </body>
